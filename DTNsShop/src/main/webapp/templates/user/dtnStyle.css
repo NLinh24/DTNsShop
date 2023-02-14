@@ -1,0 +1,44 @@
+.dtn-acc1 a:hover{
+	background:white;
+}
+
+/*login*/
+
+.container-login100{
+	background:url("/templates/account/images/bg.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.body2{
+	background:url("/templates/account/images/bg.png");
+	background-repeat: no-repeat;
+	background: cover;
+}
+.wrap-login100{
+	background: rgba(0, 0, 0, 0.845);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+/*register*/
+.register-form{
+	width:800px;
+}
+.form-check{
+	font-size: 15px;
+	font-style: italic;
+}
+/* .wrap-input100 {
+	width:400px;
+} */
+.bg-dtn2{
+	background:url("/templates/user/img/bgg.gif");
+	background-repeat: no-repeat;
+	background: cover;
+}
+
+.dtn-hover2{
+	color:red;
+}
+.dtn-hover2 li h4 a:hover{
+	color:red;
+}

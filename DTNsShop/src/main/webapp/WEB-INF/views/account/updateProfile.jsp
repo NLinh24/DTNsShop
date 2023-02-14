@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/common/taglib.jsp"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DTNsShop - UpdateProfile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%@ include file="/WEB-INF/common/account/head.jsp"%>
+</head>
+<body class="body2">
+<!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- End Preloader -->
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="post">
+					<span class="login100-form-title p-b-26 text-white">
+						<img class="img-fluid rounded-circle" width="150px" 
+						src="<c:url value='/uploads/user/${user.photo != null?user.photo:"default.jpg"}'/>" style="border: 4px solid crimson">
+						<h5>
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update
+							Your's Profile
+						</h5>
+					</span>
+					<div class="wrap-input100 "
+						>
+						<span class="btn-show"> <i class="fa fa-id-card"
+							aria-hidden="true"></i>
+						</span> <input class="input100 text-white" type="text" name="fullname" value="${sessionScope.user.fullname}">
+						<span class="focus-input100" data-placeholder="Fullname"></span>
+					</div>
+					<div class="wrap-input100"
+						>
+						<span class="btn-show"> <i class="fa fa-phone"
+							aria-hidden="true"></i>
+						</span> <input class="input100 text-white" type="text" name="phonenumber" value="${sessionScope.user.phonenumber}">
+						<span class="focus-input100" data-placeholder="Phone Number"></span>
+					</div>
+					<div class="wrap-input100 "
+							>
+							<span class="btn-show"> <i class="fa fa-envelope-o"
+								aria-hidden="true"></i>
+							</span> <input class="input100 text-white" type="text" name="email" value="${sessionScope.user.email}">
+							<span class="focus-input100" data-placeholder="Email"></span>
+						</div>
+						<div class="alert alert-danger align-items-center bg-white text-danger m-0" role="alert" ${messageF == null && messageP == null&& messageE == null?'hidden':''} style="font-size: 13px;">
+						 	<div>
+						 		${messageF}
+						 	</div>
+						 	<div>
+						 		${messageP}
+						 	</div>
+						 	<div>
+						 		${messageE}
+						 	</div>
+						</div>
+						<div class="alert alert-success align-items-center text-success m-0" role="alert" ${message == null?'hidden':''} style="font-size: 13px;">
+						 	<div class="d-flex">
+						 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 20 20">
+								  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+								  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+								</svg>
+						 		${message}
+						 	</div>
+						</div>
+						
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">Save</button>
+						</div>
+					</div>
+				</form>
+				<div class="mt-1">
+					<a class="txt2 text-danger" href="index.html"> <i
+						class="fa fa-undo" aria-hidden="true"></i> Về trang chủ
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+	<%@ include file="/WEB-INF/common/account/foot.jsp"%>
+</body>
+</html>
